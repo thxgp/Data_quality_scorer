@@ -2,11 +2,12 @@ from abc import ABC, abstractmethod
 import pandas as pd
 from typing import List, Dict, Any
 
+
 class BaseIngestor(ABC):
     """Base class for all data source ingestors."""
-    
+
     @abstractmethod
-    def fetch_data(self, limit: int = 100) -> pd.DataFrame:
+    def fetch_data(self, *args: Any, **kwargs: Any) -> pd.DataFrame:
         """Fetch data from the source and return a normalized DataFrame."""
         pass
 

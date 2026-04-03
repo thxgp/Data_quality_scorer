@@ -9,4 +9,10 @@ praw
 apscheduler
 slack-sdk
 python-dotenv
+requests
+numpy
+
+# Testing
 pytest
+pytest-cov
+pytest-asyncio
