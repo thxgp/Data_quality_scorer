@@ -1,6 +1,6 @@
 # Data Quality Scorer - Automatic Monitoring System 🚀
 
-This project is an automated data quality monitoring system that pulls data from Reddit and HackerNews, runs it through a 5-dimension scoring engine, and provides real-time Slack alerts and a Power BI-ready database.
+This project is an automated data quality monitoring system that pulls data from the **HackerNews API**, runs it through a 5-dimension scoring engine, and provides real-time Slack alerts and a Power BI-ready database.
 
 ## 📊 Dashboard Gallery
 <p align="center">
@@ -23,24 +23,24 @@ The core of this project is a custom scoring algorithm that evaluates data batch
 5.  **Accuracy (15%)**: Validates the dataset against a predefined schema to ensure all required fields are present and correctly typed.
 
 ## 🛠️ Tech Stack & Capabilities
-- **Backend Architecture**: FastAPI, SQLAlchemy, APScheduler, PRAW. 🏗️
+- **Backend Architecture**: FastAPI, SQLAlchemy, APScheduler. 🏗️
 - **Storage**: Supabase (PostgreSQL) with optimized JSON support. 🗄️
 - **Quality Engine**: Scores data based on **Completeness, Consistency, Freshness, Uniqueness, and Accuracy**. 🧠
 - **Real-time Alerting**: Pushes 🟡/🔴 Slack notifications for quality drops. 🚨
 - **Portfolio Ready**: Professional API documentation (Swagger) and Power BI optimized SQL views. 📈
 
 ## 🚀 Quick Launch
-1.  **Configure Environment**: Copy `.env.example` to `.env` and enter your credentials (Supabase, Reddit, Slack). 🛠️
+1.  **Configure Environment**: Copy `.env.example` to `.env` and enter your credentials (Supabase, Slack). 🛠️
 2.  **Install Dependencies**: `pip install -r requirements.txt`. 📦
 3.  **Start API & Monitoring**: `python -m src.api.main`. 💎
 
 ## 🌐 API Endpoints
 - `/health`: System status check. ✅
-- `/quality/latest/{source}`: Most recent quality score. 📊
-- `/quality/history/{source}`: Historical data trends for Power BI. 📈
+- `/quality/latest/hackernews`: Most recent quality score. 📊
+- `/quality/history/hackernews`: Historical data trends for Power BI. 📈
 
 ## 📂 Project Structure
-- `src/ingest`: Data fetching and normalization. 📥
+- `src/ingest`: Data fetching from HackerNews and normalization. 📥
 - `src/scoring`: Core quality scoring logic. 🧠
 - `src/database`: Supabase persistence and models. 🗄️
 - `src/api`: FastAPI server and endpoints. 🌐
