@@ -2,6 +2,26 @@
 
 This project is an automated data quality monitoring system that pulls data from Reddit and HackerNews, runs it through a 5-dimension scoring engine, and provides real-time Slack alerts and a Power BI-ready database.
 
+## 📊 Dashboard Gallery
+<p align="center">
+  <img src="dashboard/demo4.png" width="45%" />
+  <img src="dashboard/demo3.png" width="45%" />
+  <br>
+  <img src="dashboard/demo2.png" width="45%" />
+  <img src="dashboard/demo1.png" width="45%" />
+</p>
+
+*The system provides real-time monitoring of data health across five weighted dimensions, categorizing batches as GREEN (Healthy), YELLOW (Warning), or RED (Critical).*
+
+## 🧠 Quality Scoring Engine
+The core of this project is a custom scoring algorithm that evaluates data batches across five critical dimensions:
+
+1.  **Completeness (25%)**: Measures the percentage of non-null values in the dataset.
+2.  **Consistency (25%)**: Uses statistical IQR (Interquartile Range) analysis to detect and penalize outliers in numerical fields like scores and comment counts.
+3.  **Freshness (20%)**: Calculates the time lag between the current timestamp and the latest record's creation date to ensure data recency.
+4.  **Uniqueness (15%)**: Identifies and flags duplicate records using unique source IDs.
+5.  **Accuracy (15%)**: Validates the dataset against a predefined schema to ensure all required fields are present and correctly typed.
+
 ## 🛠️ Tech Stack & Capabilities
 - **Backend Architecture**: FastAPI, SQLAlchemy, APScheduler, PRAW. 🏗️
 - **Storage**: Supabase (PostgreSQL) with optimized JSON support. 🗄️
