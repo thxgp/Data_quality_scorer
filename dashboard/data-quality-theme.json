@@ -1,0 +1,146 @@
+{
+  "name": "Data Quality Monitor - Clean Minimal",
+  "dataColors": [
+    "#2E7D32",
+    "#F9A825", 
+    "#C62828",
+    "#1565C0",
+    "#5E35B1",
+    "#00838F",
+    "#4E342E",
+    "#37474F"
+  ],
+  "background": "#FAFAFA",
+  "foreground": "#212121",
+  "tableAccent": "#1565C0",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [{"color": {"solid": {"color": "#FFFFFF"}}}],
+        "border": [{"color": {"solid": {"color": "#E0E0E0"}}}],
+        "borderRadius": [{"value": 8}],
+        "dropShadow": [{
+          "show": true,
+          "color": {"solid": {"color": "#00000010"}},
+          "position": "Outer",
+          "preset": "BottomRight",
+          "blur": 4,
+          "angle": 315,
+          "distance": 2
+        }]
+      },
+      "title": {
+        "fontColor": [{"color": {"solid": {"color": "#424242"}}}],
+        "fontSize": [{"value": 12}],
+        "fontFamily": [{"value": "Segoe UI Semibold"}]
+      },
+      "labels": {
+        "fontColor": [{"color": {"solid": {"color": "#616161"}}}],
+        "fontSize": [{"value": 10}],
+        "fontFamily": [{"value": "Segoe UI"}]
+      },
+      "categoryAxis": {
+        "labelColor": [{"color": {"solid": {"color": "#757575"}}}]
+      },
+      "valueAxis": {
+        "labelColor": [{"color": {"solid": {"color": "#757575"}}}],
+        "gridlineColor": [{"color": {"solid": {"color": "#EEEEEE"}}}]
+      }
+    },
+    "card": {
+      "*": {
+        "background": [{"color": {"solid": {"color": "#FFFFFF"}}}],
+        "wordWrap": [{"value": false}]
+      },
+      "labels": {
+        "fontSize": [{"value": 36}],
+        "fontColor": [{"color": {"solid": {"color": "#1565C0"}}}],
+        "fontFamily": [{"value": "Segoe UI Light"}]
+      },
+      "categoryLabels": {
+        "fontSize": [{"value": 11}],
+        "fontColor": [{"color": {"solid": {"color": "#9E9E9E"}}}]
+      }
+    },
+    "lineChart": {
+      "*": {
+        "background": [{"color": {"solid": {"color": "#FFFFFF"}}}]
+      },
+      "lineStyles": {
+        "strokeWidth": [{"value": 3}],
+        "lineStyle": [{"value": "solid"}]
+      },
+      "dataPoint": {
+        "markerSize": [{"value": 6}]
+      }
+    },
+    "pieChart": {
+      "*": {
+        "background": [{"color": {"solid": {"color": "#FFFFFF"}}}]
+      },
+      "slices": {
+        "innerRadiusRatio": [{"value": 60}]
+      }
+    },
+    "clusteredBarChart": {
+      "*": {
+        "background": [{"color": {"solid": {"color": "#FFFFFF"}}}]
+      }
+    },
+    "slicer": {
+      "*": {
+        "background": [{"color": {"solid": {"color": "#FFFFFF"}}}]
+      },
+      "items": {
+        "fontColor": [{"color": {"solid": {"color": "#424242"}}}],
+        "background": [{"color": {"solid": {"color": "#F5F5F5"}}}]
+      },
+      "selection": {
+        "selectAllCheckboxEnabled": [{"value": true}]
+      }
+    },
+    "tableEx": {
+      "*": {
+        "background": [{"color": {"solid": {"color": "#FFFFFF"}}}]
+      },
+      "grid": {
+        "gridVertical": [{"value": false}],
+        "gridHorizontal": [{"value": true}],
+        "gridHorizontalColor": [{"color": {"solid": {"color": "#F0F0F0"}}}],
+        "rowPadding": [{"value": 6}]
+      },
+      "columnHeaders": {
+        "fontColor": [{"color": {"solid": {"color": "#424242"}}}],
+        "backColor": [{"color": {"solid": {"color": "#FAFAFA"}}}],
+        "fontSize": [{"value": 11}],
+        "fontFamily": [{"value": "Segoe UI Semibold"}]
+      },
+      "values": {
+        "fontColor": [{"color": {"solid": {"color": "#616161"}}}],
+        "fontSize": [{"value": 10}]
+      }
+    }
+  },
+  "textClasses": {
+    "title": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 14,
+      "color": "#212121"
+    },
+    "header": {
+      "fontFace": "Segoe UI Semibold", 
+      "fontSize": 12,
+      "color": "#424242"
+    },
+    "label": {
+      "fontFace": "Segoe UI",
+      "fontSize": 10,
+      "color": "#616161"
+    },
+    "callout": {
+      "fontFace": "Segoe UI Light",
+      "fontSize": 36,
+      "color": "#1565C0"
+    }
+  }
+}
