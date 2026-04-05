@@ -189,6 +189,55 @@
 
 ---
 
+## DAX Measures Reference
+
+To ensure your dashboard is dynamic and correctly formatted, use the following DAX measures:
+
+### 1. Current Overall Score
+Fetches the score from the most recent check.
+```dax
+Current Score = 
+VAR LatestCheck = MAXX(ALL('quality_metrics'), 'quality_metrics'[measured_at])
+RETURN
+CALCULATE(
+    MAX('quality_metrics'[overall_score]),
+    'quality_metrics'[measured_at] = LatestCheck
+)
+```
+
+### 2. Current Health Status
+Returns the status (GREEN/YELLOW/RED) for the latest check.
+```dax
+Current Status = 
+VAR LatestCheck = MAXX(ALL('quality_metrics'), 'quality_metrics'[measured_at])
+RETURN
+CALCULATE(
+    MAX('quality_metrics'[status]),
+    'quality_metrics'[measured_at] = LatestCheck
+)
+```
+
+### 3. Status Color Logic
+Use this measure for conditional formatting of background colors or text.
+```dax
+Status Color = 
+SWITCH(
+    [Current Status],
+    "GREEN", "#2E7D32",
+    "YELLOW", "#F9A825",
+    "RED", "#C62828",
+    "#212121"
+)
+```
+
+### 4. Dimension Score (Bar Chart)
+Ensures dimension scores (0.0-1.0) are displayed as percentages (0-100).
+```dax
+Dimension Score = AVERAGE('quality_metrics'[overall_score])
+```
+
+---
+
 ## Export for Portfolio
 
 1. **Screenshot:** File → Export → Export to PDF (or use Snipping Tool for high-res PNG)
